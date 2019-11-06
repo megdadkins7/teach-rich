@@ -2,13 +2,13 @@ import React from 'react'
 
 import { StyledInfoInput } from '../styles/InfoInput'
 
-function FixedCosts() {
+function Investments() {
   return (
     <StyledInfoInput>
-      <span className='Info'>Enter the total of your monthly bills (rent, utilities, debt, etc):</span>
+      <span className='Info'>Enter the total of your monthly investments (401(k), Roth IRA, etc):</span>
       <input className='Input' type='text' placeholder='Enter total...' />
     </StyledInfoInput>
   )
 }
 
-export default FixedCosts
+export default Investments
