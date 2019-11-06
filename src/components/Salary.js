@@ -1,12 +1,32 @@
-import React from 'react'
+import React, { useState } from 'react'
 
 import { StyledInfoInput } from '../styles/InfoInput'
 
-function Salary() {
+function Salary({ addSalary }) {
+  const [value, setValue] = useState("");  
+  const handleSubmit = e => {
+    e.preventDefault();
+    if(!value) return;
+  
+    addSalary(value)
+    setValue("");
+  }
+
   return (
     <StyledInfoInput>
       <span className='Info'>Enter the total of your monthly salary (take-home-pay):</span>
-      <input className='Input' type='text' placeholder='Enter total...' />
+      <div className='DollarWrapper'>
+      <form onSubmit={handleSubmit}>
+        <span className='Dollar'>$</span>
+        <input 
+          className='Input' 
+          type='number' 
+          placeholder='Enter total...' 
+          value={value}
+          onChange={e => setValue(e.target.value)}
+        />
+      </form>
+      </div>
     </StyledInfoInput>
   )
 }

@@ -6,7 +6,10 @@ function FixedCosts() {
   return (
     <StyledInfoInput>
       <span className='Info'>Enter the total of your monthly bills (rent, utilities, debt, etc):</span>
-      <input className='Input' type='text' placeholder='Enter total...' />
+      <div className='DollarWrapper'>
+        <span className='Dollar'>$</span>
+        <input className='Input' type='number' placeholder='Enter total...' />
+      </div>
     </StyledInfoInput>
   )
 }

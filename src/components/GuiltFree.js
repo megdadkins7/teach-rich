@@ -1,12 +1,16 @@
 import React from 'react'
 
+import { numToCurrency } from '../data'
+
 import { StyledInfoInput } from '../styles/InfoInput'
 
 function GuiltFree() {
   return (
     <StyledInfoInput>
-      <span className='Info'>Enter the total of your monthly spending (dining out, clothes, movies, etc):</span>
-      <input className='Input' type='text' placeholder='Enter total...' />
+      <span className='Info'>Your guilt-free spending money (dining out, clothes, movies, etc):</span>
+      <div className='DollarWrapper'>
+        <span className='Dollar'>{numToCurrency(0)}</span>      
+      </div>
     </StyledInfoInput>
   )
 }

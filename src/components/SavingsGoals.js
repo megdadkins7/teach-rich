@@ -1,12 +1,16 @@
 import React from 'react'
 
+import { numToCurrency } from '../data'
+
 import { StyledInfoInput } from '../styles/InfoInput'
 
 function SavingsGoals() {
   return (
     <StyledInfoInput>
-      <span className='Info'>Enter the total of your monthly savings (vacations, emergency funds, etc):</span>
-      <input className='Input' type='text' placeholder='Enter total...' />
+      <span className='Info'>Your monthly savings goal (vacations, emergency funds, etc):</span>
+      <div className='DollarWrapper'>
+        <span className='Dollar'>{numToCurrency(0)}</span>
+      </div>
     </StyledInfoInput>
   )
 }
