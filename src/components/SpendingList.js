@@ -6,8 +6,12 @@ import FixedCosts from './FixedCosts'
 import Investments from './Investments'
 import SavingsGoals from './SavingsGoals'
 import GuiltFree from './GuiltFree'
+import SalaryCard from './SalaryCard';
+import FixedCostsCard from './FixedCostsCard';
 
 const StyledSpendingList = styled.div`
+  display: flex;
+  justify-content: space-between;
 `;
 
 function SpendingList() {
@@ -26,11 +30,17 @@ function SpendingList() {
   }
   return (
     <StyledSpendingList>
-      <Salary salary={salary} addSalary={addSalary} />
-      <FixedCosts fixed={fixed} addFixedCosts={addFixedCosts} />
-      <Investments />
-      <SavingsGoals />
-      <GuiltFree />
+      <div className='ListWrapper'>
+        <Salary salary={salary} addSalary={addSalary} />
+        <FixedCosts fixed={fixed} addFixedCosts={addFixedCosts} />
+        <Investments />
+        <SavingsGoals />
+        <GuiltFree />
+      </div>
+      <div className='CardWrapper'>
+        <SalaryCard />
+        <FixedCostsCard />
+      </div>
     </StyledSpendingList>
   )
 }

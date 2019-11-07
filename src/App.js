@@ -1,14 +1,15 @@
 import React from 'react';
 
-import CSPApp from './components/CSPApp'
+import SpendingList from './components/SpendingList';
 
 import GlobalStyles from './styles/GlobalStyles'
+
 
 function App() {
   return (
     <>
       <GlobalStyles />
-      <CSPApp />
+      <SpendingList />
     </>
   );
 }
