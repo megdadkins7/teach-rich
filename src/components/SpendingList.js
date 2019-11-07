@@ -15,8 +15,8 @@ const StyledSpendingList = styled.div`
 `;
 
 function SpendingList() {
-  const initialSalary = 1
-  const initialFixedCosts = 1
+  const initialSalary = 0
+  const initialFixedCosts = 0
   const [salary, setSalary] = useState(initialSalary)
   const [fixed, setFixed] = useState(initialFixedCosts)
 
@@ -38,8 +38,8 @@ function SpendingList() {
         <GuiltFree />
       </div>
       <div className='CardWrapper'>
-        <SalaryCard />
-        <FixedCostsCard />
+        <SalaryCard salary={salary} />
+        <FixedCostsCard fixed={fixed} />
       </div>
     </StyledSpendingList>
   )

@@ -6,10 +6,10 @@ const StyledSalaryCard = styled.div`
   padding: 5px;
 `;
 
-function SalaryCard() {
+function SalaryCard({ salary }) {
   return (
     <StyledSalaryCard>
-      <div className='SalaryWrapper'>Hello from Salary</div>
+      <div className='SalaryWrapper'>${salary}.00</div>
     </StyledSalaryCard>
   )
 }

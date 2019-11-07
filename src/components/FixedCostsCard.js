@@ -7,10 +7,10 @@ const StyledFixedCostsCard = styled.div`
   margin-top: 20px;
 `;
 
-function FixedCostsCard() {
+function FixedCostsCard({ fixed }) {
   return (
     <StyledFixedCostsCard>
-      <div className='FixedWrapper'>Hello from Fixed</div>
+      <div className='FixedWrapper'>${fixed}.00</div>
     </StyledFixedCostsCard>
   )
 }
