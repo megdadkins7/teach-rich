@@ -1,6 +1,6 @@
 import React from 'react';
 
-import SpendingList from './components/SpendingList'
+import CSPApp from './components/CSPApp'
 
 import GlobalStyles from './styles/GlobalStyles'
 
@@ -8,7 +8,7 @@ function App() {
   return (
     <>
       <GlobalStyles />
-      <SpendingList />
+      <CSPApp />
     </>
   );
 }
