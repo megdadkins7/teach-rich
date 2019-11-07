@@ -28,6 +28,14 @@ function SpendingList() {
     const newFixed = money;
     setFixed(newFixed)
   }
+  //const getInvestments = (salary, fixedCosts) {
+  //  const newInvest = (salary - fixedCosts) * .1
+  //  setInvest(newInvest)
+  //}
+
+  //const getSavings = 
+
+  //const getGuiltFree = 
   return (
     <StyledSpendingList>
       <div className='ListWrapper'>
