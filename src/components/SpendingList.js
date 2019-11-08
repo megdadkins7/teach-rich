@@ -17,8 +17,14 @@ const StyledSpendingList = styled.div`
 function SpendingList() {
   const initialSalary = 0
   const initialFixedCosts = 0
+  const initialInvestments = 0
+  const initialSavings = 0
+  const initialSpending = 0
   const [salary, setSalary] = useState(initialSalary)
   const [fixed, setFixed] = useState(initialFixedCosts)
+  const [investments, setInvestments] = useState(initialInvestments)
+  const [savings, setSavings] = useState(initialSavings)
+  const [spending, setSpending] = useState(initialSpending)
 
   const addSalary = money => {
     const newSalary =  money;
@@ -28,18 +34,18 @@ function SpendingList() {
     const newFixed = money;
     setFixed(newFixed)
   }
-  //const getInvestments = (salary, fixedCosts) {
-  //  const newInvest = (salary - fixedCosts) * .1
+  //const getInvestments = (salary, fixed) {
+  //  const newInvest = (salary - fixed) * .1
   //  setInvest(newInvest)
   //}
 
-  //const getSavings = (salary, fixedCosts, investments) {
-  //  const newSavings = (salary - fixedCosts - investments) * .05
+  //const getSavings = (salary, fixed, investments) {
+  //  const newSavings = (salary - fixed - investments) * .05
   //  setSavings(newSavings) 
   //}
 
-  //const getSpending = (salary, fixedCosts, investments, savings) {
-  //  const newSpending = (salary - fixedCosts - investments - savings) * .2
+  //const getSpending = (salary, fixed, investments, savings) {
+  //  const newSpending = (salary - fixed - investments - savings) * .2
   //  setSpending(newSpending)
   //}
   return (
