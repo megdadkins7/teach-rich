@@ -33,9 +33,15 @@ function SpendingList() {
   //  setInvest(newInvest)
   //}
 
-  //const getSavings = 
+  //const getSavings = (salary, fixedCosts, investments) {
+  //  const newSavings = (salary - fixedCosts - investments) * .05
+  //  setSavings(newSavings) 
+  //}
 
-  //const getGuiltFree = 
+  //const getSpending = (salary, fixedCosts, investments, savings) {
+  //  const newSpending = (salary - fixedCosts - investments - savings) * .2
+  //  setSpending(newSpending)
+  //}
   return (
     <StyledSpendingList>
       <div className='ListWrapper'>
