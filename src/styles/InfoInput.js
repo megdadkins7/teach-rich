@@ -2,7 +2,6 @@ import styled from 'styled-components'
 
 export const StyledInfoInput = styled.div`
   display: flex;
-  max-width: 70%;
   .Info {
     margin: 10px;
     padding: 5px;
