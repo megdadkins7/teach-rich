@@ -22,4 +22,9 @@ export const StyledInfoInput = styled.div`
     border-radius: 4px;
     width: 150px;
   }
+  .MoneyFont{
+    color: #51E3A4;
+    font-weight: 500;
+    font-size: 2rem;
+  }
 `;

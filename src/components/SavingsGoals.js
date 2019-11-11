@@ -8,7 +8,7 @@ function SavingsGoals({ salary, fixed, investments, savings, getSavings}) {
       <span className='Info'>Your monthly savings goal (vacations, emergency funds, etc):</span>
       <div className='DollarWrapper'>
         <span className='Dollar'>{getSavings(salary, fixed, investments, savings)}</span>
-        <span>${savings.toFixed(2)}</span>
+        <span className='MoneyFont'>${savings.toFixed(2)}</span>
       </div>
     </StyledInfoInput>
   )
