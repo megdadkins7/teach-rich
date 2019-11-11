@@ -34,28 +34,28 @@ function SpendingList() {
     const newFixed = money;
     setFixed(newFixed)
   }
-  //const getInvestments = (salary, fixed) {
-  //  const newInvest = (salary - fixed) * .1
-  //  setInvest(newInvest)
-  //}
+  const getInvestments = (salary, fixed) => {
+    const newInvestments = (salary - fixed) * .1
+    setInvestments(newInvestments)  
+  }
 
-  //const getSavings = (salary, fixed, investments) {
-  //  const newSavings = (salary - fixed - investments) * .05
-  //  setSavings(newSavings) 
-  //}
+  const getSavings = (salary, fixed, investments) => {
+   const newSavings = (salary - fixed - investments) * .05
+   setSavings(newSavings) 
+  }
 
-  //const getSpending = (salary, fixed, investments, savings) {
-  //  const newSpending = (salary - fixed - investments - savings) * .2
-  //  setSpending(newSpending)
-  //}
+  const getSpending = (salary, fixed, investments, savings) => {
+   const newSpending = (salary - fixed - investments - savings) * .2
+   setSpending(newSpending)
+  }
   return (
     <StyledSpendingList>
       <div className='ListWrapper'>
         <Salary salary={salary} addSalary={addSalary} />
         <FixedCosts fixed={fixed} addFixedCosts={addFixedCosts} />
-        <Investments />
-        <SavingsGoals />
-        <GuiltFree />
+        <Investments salary={salary} fixed={fixed} investments={investments} getInvestments={getInvestments} />
+        <SavingsGoals salary={salary} fixed={fixed} investments={investments} savings={savings} getSavings={getSavings} />
+        <GuiltFree salary={salary} fixed={fixed} investments={investments} savings={savings} spending={spending} getSpending={getSpending} />
       </div>
       <div className='CardWrapper'>
         <SalaryCard salary={salary} />
