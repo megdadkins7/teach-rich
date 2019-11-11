@@ -7,7 +7,8 @@ function GuiltFree({ salary, fixed, investments, savings, spending, getSpending}
     <StyledInfoInput>
       <span className='Info'>Your guilt-free spending money (dining out, concerts, movies, etc):</span>
       <div className='DollarWrapper'>
-        <span className='Dollar'>{getSpending(salary, fixed, investments, savings, spending)}</span>      
+        <span className='Dollar'>{getSpending(salary, fixed, investments, savings, spending)}</span>
+        <span>${spending.toFixed(2)}</span>
       </div>
     </StyledInfoInput>
   )

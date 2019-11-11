@@ -9,6 +9,7 @@ function Investments({ salary, fixed, investments, getInvestments}) {
       <span className='Info'>Your monthly investments goal (401(k), Roth IRA, etc):</span>
       <div className='DollarWrapper'>
         <span className='Dollar'>{getInvestments(salary, fixed, investments)}</span>
+        <span>${investments.toFixed(2)}</span>
       </div>
     </StyledInfoInput>
   )

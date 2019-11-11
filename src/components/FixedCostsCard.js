@@ -1,8 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
 
-import { numToCurrency } from '../data'
-
 const StyledFixedCostsCard = styled.div`
   margin: 10px;
   padding: 5px;
@@ -11,7 +9,7 @@ const StyledFixedCostsCard = styled.div`
 function FixedCostsCard({ fixed }) {
   return (
     <StyledFixedCostsCard>
-      <div className='FixedWrapper'>{fixed}</div>
+      <div className='FixedWrapper'>${fixed}.00</div>
     </StyledFixedCostsCard>
   )
 }

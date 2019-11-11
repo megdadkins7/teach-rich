@@ -1,8 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
 
-import { numToCurrency } from '../data'
-
 const StyledSalaryCard = styled.div`
   margin: 10px;
   padding: 5px;
@@ -11,7 +9,7 @@ const StyledSalaryCard = styled.div`
 function SalaryCard({ salary }) {
   return (
     <StyledSalaryCard>
-      <div className='SalaryWrapper'>{salary}</div>
+      <div className='SalaryWrapper'>${salary}.00</div>
     </StyledSalaryCard>
   )
 }
