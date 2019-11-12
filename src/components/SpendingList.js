@@ -1,18 +1,10 @@
 import React, { useState } from 'react'
-import styled from 'styled-components'
 
 import Salary from './Salary'
 import FixedCosts from './FixedCosts'
 import Investments from './Investments'
 import SavingsGoals from './SavingsGoals'
 import GuiltFree from './GuiltFree'
-import SalaryCard from './SalaryCard';
-import FixedCostsCard from './FixedCostsCard';
-
-const StyledSpendingList = styled.div`
-  display: flex;
-  justify-content: space-between;
-`;
 
 function SpendingList() {
   const initialSalary = 0
@@ -49,19 +41,13 @@ function SpendingList() {
    setSpending(newSpending)
   }
   return (
-    <StyledSpendingList>
-      <div className='ListWrapper'>
-        <Salary salary={salary} addSalary={addSalary} />
-        <FixedCosts fixed={fixed} addFixedCosts={addFixedCosts} />
-        <Investments salary={salary} fixed={fixed} investments={investments} getInvestments={getInvestments} />
-        <SavingsGoals salary={salary} fixed={fixed} investments={investments} savings={savings} getSavings={getSavings} />
-        <GuiltFree salary={salary} fixed={fixed} investments={investments} savings={savings} spending={spending} getSpending={getSpending} />
-      </div>
-      <div className='CardWrapper'>
-        <SalaryCard salary={salary} />
-        <FixedCostsCard fixed={fixed} />
-      </div>
-    </StyledSpendingList>
+    <>
+      <Salary salary={salary} addSalary={addSalary} />
+      <FixedCosts fixed={fixed} addFixedCosts={addFixedCosts} />
+      <Investments salary={salary} fixed={fixed} investments={investments} getInvestments={getInvestments} />
+      <SavingsGoals salary={salary} fixed={fixed} investments={investments} savings={savings} getSavings={getSavings} />
+      <GuiltFree salary={salary} fixed={fixed} investments={investments} savings={savings} spending={spending} getSpending={getSpending} />
+    </>
   )
 }
 

@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 
 import { StyledInfoInput } from '../styles/InfoInput'
 
-function FixedCosts({ addFixedCosts }) {
+function FixedCosts({ addFixedCosts, fixed }) {
   const [value, setValue] = useState("");  
   const handleSubmit = e => {
     e.preventDefault();
@@ -20,10 +20,12 @@ function FixedCosts({ addFixedCosts }) {
         <input 
           className='Input' 
           type='number' 
+          step='.01'
           placeholder='Enter total...' 
           value={value}
           onChange={e => setValue(e.target.value)}
         />
+        <span className='MoneyFont'>${parseFloat(fixed).toFixed(2)}</span>
       </form>
       </div>
     </StyledInfoInput>
