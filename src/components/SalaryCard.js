@@ -2,7 +2,7 @@ import React from 'react'
 import styled from 'styled-components'
 
 const StyledSalaryCard = styled.div`
-  margin: 10px;
+  margin: 15px;
   padding: 5px;
   .SalaryFont {
     color: #51E3A4;
@@ -15,7 +15,7 @@ function SalaryCard({ salary }) {
   return (
     <StyledSalaryCard>
       <div className='SalaryWrapper'>
-        <span className='SalaryFont'>${salary}.00</span>
+        <span className='SalaryFont'>${parseFloat(salary).toFixed(2)}</span>
       </div>
     </StyledSalaryCard>
   )

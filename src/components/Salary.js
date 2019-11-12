@@ -21,6 +21,7 @@ function Salary({ addSalary }) {
         <input 
           className='Input' 
           type='number' 
+          step='.01'
           placeholder='Enter total...' 
           value={value}
           onChange={e => setValue(e.target.value)}
