@@ -2,13 +2,13 @@ import styled from 'styled-components'
 
 export const StyledInfoInput = styled.div`
   display: flex;
+  margin: 10px;
   .Info {
     margin: 10px;
     padding: 5px;
   }
   .DollarWrapper {
     margin-left: auto;
-    padding: 5px;
   }
   .Dollar {
     margin-right: 5px;
@@ -23,6 +23,7 @@ export const StyledInfoInput = styled.div`
     width: 150px;
   }
   .MoneyFont{
+    margin-left: 20px;
     color: #51E3A4;
     font-weight: 500;
     font-size: 2rem;

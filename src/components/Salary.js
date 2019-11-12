@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 
 import { StyledInfoInput } from '../styles/InfoInput'
 
-function Salary({ addSalary }) {
+function Salary({ addSalary, salary }) {
   const [value, setValue] = useState("");  
   const handleSubmit = e => {
     e.preventDefault();
@@ -26,6 +26,7 @@ function Salary({ addSalary }) {
           value={value}
           onChange={e => setValue(e.target.value)}
         />
+        <span className='MoneyFont'>${parseFloat(salary).toFixed(2)}</span>
       </form>
       </div>
     </StyledInfoInput>

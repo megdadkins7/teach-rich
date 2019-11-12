@@ -2,7 +2,6 @@ import React from 'react'
 
 import { StyledInfoInput } from '../styles/InfoInput'
 
-
 function Investments({ salary, fixed, investments, getInvestments}) {
   return (
     <StyledInfoInput>
