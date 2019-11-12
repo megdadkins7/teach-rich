@@ -24,6 +24,7 @@ export const StyledInfoInput = styled.div`
   }
   .MoneyFont{
     margin-left: 20px;
+    margin-right: 20px;
     color: #51E3A4;
     font-weight: 500;
     font-size: 2rem;

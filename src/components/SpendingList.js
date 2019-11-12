@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 
+import Header from './Header'
 import Salary from './Salary'
 import FixedCosts from './FixedCosts'
 import Investments from './Investments'
@@ -42,6 +43,7 @@ function SpendingList() {
   }
   return (
     <>
+      <Header />
       <Salary salary={salary} addSalary={addSalary} />
       <FixedCosts fixed={fixed} addFixedCosts={addFixedCosts} />
       <Investments salary={salary} fixed={fixed} investments={investments} getInvestments={getInvestments} />
