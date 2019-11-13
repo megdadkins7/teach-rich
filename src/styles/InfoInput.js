@@ -4,8 +4,13 @@ export const StyledInfoInput = styled.div`
   display: flex;
   margin: 10px;
   .Info {
-    margin: 10px;
+    margin-left: 10px;
     padding: 5px;
+  }
+  .PercentInfo {
+    display: block;
+    margin: 10px 10px 10px 15px;
+    font-size: 1rem;
   }
   .DollarWrapper {
     margin-left: auto;
