@@ -18,6 +18,8 @@ function SpendingList() {
   const [investments, setInvestments] = useState(initialInvestments)
   const [savings, setSavings] = useState(initialSavings)
   const [spending, setSpending] = useState(initialSpending)
+  const [savingsMax, setSavingsMax] = useState(initialSavings)
+  const [spendingMax, setSpendingMax] = useState(initialSpending)
 
   const addSalary = money => {
     const newSalary =  money;
@@ -31,15 +33,21 @@ function SpendingList() {
     const newInvestments = (salary - fixed) * .1
     setInvestments(newInvestments)  
   }
-
   const getSavings = (salary, fixed, investments) => {
    const newSavings = (salary - fixed - investments) * .05
    setSavings(newSavings) 
   }
-
+  const getSavingsMax = (salary, fixed, investments) => {
+    const newSavingsMax = (salary - fixed - investments) * .1
+    setSavingsMax(newSavingsMax)
+  }
   const getSpending = (salary, fixed, investments, savings) => {
    const newSpending = (salary - fixed - investments - savings) * .2
    setSpending(newSpending)
+  }
+  const getSpendingMax = (salary, fixed, investments, savings) => {
+    const newSpendingMax = (salary - fixed - investments - savings) * .35
+    setSpendingMax(newSpendingMax)
   }
   return (
     <>
@@ -47,8 +55,8 @@ function SpendingList() {
       <Salary salary={salary} addSalary={addSalary} />
       <FixedCosts fixed={fixed} addFixedCosts={addFixedCosts} />
       <Investments salary={salary} fixed={fixed} investments={investments} getInvestments={getInvestments} />
-      <SavingsGoals salary={salary} fixed={fixed} investments={investments} savings={savings} getSavings={getSavings} />
-      <GuiltFree salary={salary} fixed={fixed} investments={investments} savings={savings} spending={spending} getSpending={getSpending} />
+      <SavingsGoals salary={salary} fixed={fixed} investments={investments} savings={savings} getSavings={getSavings} savingsMax={savingsMax} getSavingsMax={getSavingsMax} />
+      <GuiltFree salary={salary} fixed={fixed} investments={investments} savings={savings} spending={spending} getSpending={getSpending} spendingMax={spendingMax} getSpendingMax={getSpendingMax} />
     </>
   )
 }
