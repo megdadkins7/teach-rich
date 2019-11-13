@@ -14,7 +14,10 @@ function Salary({ addSalary, salary }) {
 
   return (
     <StyledInfoInput>
-      <span className='Info'>Enter the total of your monthly salary (take-home-pay):</span>
+      <div className='InfoWrapper'>
+        <span className='Info'>Enter the total of your monthly salary (take-home-pay):</span>
+        <span className='PercentInfo'>Your net pay (after taxes are taken out of your paycheck)</span>
+      </div>
       <div className='DollarWrapper'>
       <form onSubmit={handleSubmit}>
         <span className='Dollar'>$</span>

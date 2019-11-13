@@ -11,6 +11,7 @@ export const StyledInfoInput = styled.div`
     display: block;
     margin: 10px 10px 10px 15px;
     font-size: 1rem;
+    padding-bottom: 5px;
   }
   .DollarWrapper {
     margin-left: auto;
